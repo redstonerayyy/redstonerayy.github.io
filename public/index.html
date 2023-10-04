@@ -5,43 +5,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/static/css/main.min.css">
-    <link rel="stylesheet" href="/static/css/atom-one-dark.min.css">
-    <title>Index of the Templex Documentation</title>
-    <meta name="description" content="Overview of the different Parts of the Documentation. Links to other Pages. Table of Contents.">
+    <title>Redstonerayy's Website</title>
+    <meta name="description" content="Index Page. Shows a menu bar and links to different posts.">
 </head>
 
-<link rel="stylesheet" href="/static/css/post.min.css">
+<link rel="stylesheet" href="/static/css/index.min.css">
 
 <body>
     <div id="page">
-        
+        <link rel="stylesheet" href="/static/css/navbar.min.css">
+<nav class="top-nav">
+    <a href="https://github.com/Redstonerayy">
+        <img class="top-nav-github-logo" src="/static/images/github-mark.png" alt="Github Dark Logo">
+    </a>
+</nav>
         <div class="main-content">
-            <h1>Welcome to the Templex Documentation</h1>
-<h2>Your Options</h2>
-<ul>
-<li>
-<p><a href="./introduction.html">Introduction</a></p>
-</li>
-<li>
-<p><a href="./cli-commands.html">CLI Overview</a></p>
-</li>
-<li>
-<p><a href="./configuration.html">Templex Configuration</a></p>
-</li>
-<li>
-<p><a href="./markdown-syntax.html">Markdown Syntax</a></p>
-</li>
-<li>
-<p><a href="./code-highlighting.html">Code Highlighting</a></p>
-</li>
-<li>
-<p><a href="./example-features.html">Features</a></p>
-</li>
-</ul>
+            
+<link rel="stylesheet" href="/static/css/wave.min.css">
+<div class="wave-animation">
+    
+    <div class="wave wave-2"></div>
+    
+    
+</div>
+<h2>Recent Posts</h2>
+
 
         </div>
         <p></p>
     </div>
 </body>
 
-</html>
+</html><script>
+        const pull = setInterval(async () => {
+            const res = await fetch("/_reload");
+            const data = await res.text();
+            if (data === "yes") window.location.reload();
+        }, 250);
+        </script>
