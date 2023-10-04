@@ -36,6 +36,7 @@ jobs:
                   git checkout main -- public
                   mv public/* . && rm -rf ./public
                   tree
+                  git add .
                   # Force the build to succeed, even if no files were changed
                   git commit -m "deploy" || true
-                  git push --set-upstream origin gh-pages
+                  git push -f --set-upstream origin gh-pages
