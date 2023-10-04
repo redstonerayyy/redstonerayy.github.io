@@ -25,7 +25,8 @@ jobs:
             - name: Build Pages
               run: |
                   cd ..
-                  node templex/dist/main.js
+                  pwd
+                  node ./templex/dist/main.js
 
             - name: Commit to the repo
               run: |
