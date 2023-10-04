@@ -27,12 +27,12 @@ jobs:
                   tree
                   node ./templex/dist/main.js build
 
-            - name: Build on other Branch
+            - name: Copy to other Branch
               run: |
                   git config --global user.name "templex@Rayy"
                   git config --global user.email "templex@Rayy"
                   git checkout --orphan gh-pages
-                  rm -rf * && rm -rf .*
+                  git reset --hard
                   git checkout main -- public
                   mv public/* . && rm -rf ./public
                   # Force the build to succeed, even if no files were changed
