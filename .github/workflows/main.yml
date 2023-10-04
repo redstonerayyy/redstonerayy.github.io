@@ -37,4 +37,4 @@ jobs:
                   mv public/* . && rm -rf ./public
                   # Force the build to succeed, even if no files were changed
                   git commit -m "deploy" || true
-                  git push
+                  git push --set-upstream origin gh-pages
