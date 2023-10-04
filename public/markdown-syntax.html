@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/main.min.css">
+    <link rel="stylesheet" href="/static/css/atom-one-dark.min.css">
+    <title>Markdown Syntax for Templex</title>
+    <meta name="description" content="Explains how to write Markdown for Templex. Gives many examples. It's a bit longer.">
+</head>
+
+<link rel="stylesheet" href="/static/css/post.min.css">
+
+<body>
+    <div id="page">
+        
+        <div class="main-content">
+            <h2>Markdown Syntax for Templex</h2>
+<p>Templex uses <code>markdown-it</code> for markdown to HTML conversion, so all common markdown
+feature are supported.</p>
+<h3>Metadata</h3>
+<p>Templex allows for the configuration of Metadata which will be used in nunjucks when
+apllying templating. When building the <code>type</code> property is the template which Templex
+tries to apply. In this example the template should be located at <code>layout/post.njk</code>.
+Variables such as <code>title</code>, <code>releasedate</code>, … could then be used in <code>post.njk</code>.
+Be aware that <code>-</code> inside of the metadata block will be ignored and are not allowed.</p>
+<h4>Example Metadata</h4>
+<pre><code class="yaml"><span class="hljs-meta">---</span>
+<span class="hljs-attr">title:</span> <span class="hljs-string">Markdown</span> <span class="hljs-string">Syntax</span> <span class="hljs-string">for</span> <span class="hljs-string">Templex</span>
+<span class="hljs-attr">releasedate:</span> <span class="hljs-string">&quot;2.10.23&quot;</span>
+<span class="hljs-attr">lastchanged:</span> <span class="hljs-string">&quot;2.10.23&quot;</span>
+<span class="hljs-attr">type:</span> <span class="hljs-string">post</span>
+<span class="hljs-attr">summary:</span> <span class="hljs-string">&quot;Explains how to write Markdown for Templex. Gives many examples. It&#x27;s a bit longer.&quot;</span>
+<span class="hljs-meta">---
+</span></code></pre>
+<p><a href="./index.html">Back to Index</a></p>
+
+        </div>
+        <p></p>
+    </div>
+</body>
+
+</html>
