@@ -29,13 +29,12 @@ jobs:
 
             - name: Copy to other Branch
               run: |
-                  git config --global user.name "templex@Rayy"
-                  git config --global user.email "templex@Rayy"
+                  git config --global user.name "build@actions"
+                  git config --global user.email "build@actions"
                   git checkout --orphan gh-pages
                   git reset --hard && rm -rf ./templex
                   git checkout main -- public
                   mv public/* . && rm -rf ./public
-                  tree
                   git add .
                   # Force the build to succeed, even if no files were changed
                   git commit -m "deploy" || true
