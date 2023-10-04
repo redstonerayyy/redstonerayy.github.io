@@ -27,11 +27,14 @@ jobs:
                   tree
                   node ./templex/dist/main.js build
 
-            - name: Commit to the repo
+            - name: Build on other Branch
               run: |
                   git config --global user.name "templex@Rayy"
                   git config --global user.email "templex@Rayy"
-                  git add .
+                  git checkout --orphan gh-pages
+                  rm -rf * && rm -rf .*
+                  git checkout main -- public
+                  mv public/* . && rm -rf ./public
                   # Force the build to succeed, even if no files were changed
-                  git commit -m 'Update generated files' || true
+                  git commit -m "deploy" || true
                   git push
