@@ -1,0 +1,20 @@
+$roboto: 'Roboto', sans-serif;
+$notosansmono: 'Noto Sans Mono', monospace;
+$grey: #1d1d1d;
+$white: #ffffff;
+
+.whitemode {
+    color: $grey;
+    background-color: $white;
+}
+
+.darkmode {
+    color: $white;
+    background-color: $grey;
+}
+
+.flex-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

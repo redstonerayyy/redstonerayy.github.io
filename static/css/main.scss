@@ -1,0 +1,23 @@
+@import "vars.scss";
+
+* {
+    font-family: $roboto;
+}
+
+pre {
+    tab-size:         4;
+}
+
+code, code > * {
+    font-family: ui-monospace, Consolas, Liberation Mono, monospace;
+    font-size: 1em;
+}
+
+.main-content {
+    width: 60%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
