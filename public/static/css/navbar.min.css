@@ -1,1 +1,1 @@
-.top-nav{display:flex;justify-content:flex-end;align-items:center;margin:10px}.top-nav-links{margin-right:65%}.top-nav-home{color:#000}.top-nav-github-logo{width:30px}.article-content{width:60%;margin:auto}
+.top-nav{position:absolute;z-index:1;height:30px;width:100%;display:flex;justify-content:flex-end;align-items:center;left:0;top:0;margin:10px 0px}.top-nav-links{margin-right:65%}.top-nav-home{color:#fff}.top-nav-github-logo{width:30px;margin-right:10px}.article-content{width:60%;margin:auto}

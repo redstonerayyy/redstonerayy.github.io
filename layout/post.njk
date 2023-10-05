@@ -1,8 +1,22 @@
-{% extends "components/base.njk" %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block style %}
+{% include "./components/head.njk" %}
+
 <link rel="stylesheet" href="/static/css/post.min.css">
 <link rel="stylesheet" href="/static/css/atom-one-dark.min.css">
-{% endblock %}
 
-{% block main %}{{ content }}{% endblock %}
+<body>
+    <div id="page">
+        {% include "./components/nav.njk" %}
+        <div class="main-content">
+            <article class="article-content">
+                {{ content }}
+            </article>
+        </div>
+        {% include "./components/footer.njk" %}
+    </div>
+</body>
+
+</html>
+
