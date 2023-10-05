@@ -1,121 +1,63 @@
-.wave-animation {
-	position: relative;
-	width: 100%;
-	height: 70vh;
-	background-image: url("/static/images/wallpaper_casaos.jpg");
-	background-position-y: -150px;
-	background-size: cover;
-	overflow: hidden;
-	border-bottom: 1px solid grey;
-}
+@import "vars.scss";
 
-.wave {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	background-image: url("/static/images/wave.svg");
-	overflow: hidden;
-	background-repeat: repeat-x;
-	shape-rendering: geometricPrecision;
-}
-
-.wave-1 {
-	// animation: right 10s linear infinite;
-	// animation: right 25s cubic-bezier(.55,.5,.45,.5) infinite;
-	animation: right 25s cubic-bezier(0.56, 0.34, 0.36, 0.52) infinite;
-	z-index: 1000;
-	opacity: 1;
-	animation-delay: 0s;
-	// background-position: 0px 120px;
-	height: 150px;
-	// background-size: 1800px 190px;
-}
-
-.wave-2 {
-	animation: right 8s linear infinite;
-	z-index: 999;
-	opacity: 0.5;
-	animation-delay: -4s;
-	height: 140px;
-	background-size: 1800px 140px;
-}
-
-.wave-3 {
-	animation: right 12s linear infinite;
-	z-index: 998;
-	opacity: 0.2;
-	animation-delay: -8s;
-	height: 160px;
-	background-size: 1800px 160px;
-}
-
-.wave-4 {
-	animation: right 5s linear infinite;
-	z-index: 997;
-	opacity: 0.7;
-	animation-delay: -2s;
-	height: 130px;
-	background-size: 1800px 130px;
-}
-
-@keyframes right {
-	0% {
-		// background-position-x: 0px;
-		transform: translate3d(-90px, 0, 0);
-	}
-	100% {
-		// background-position-x: 1800px;
-		transform: translate3d(85px, 0, 0);
-	}
-}
-
+/*------------ https://github.com/amehime/hexo-theme-shoka ------------*/
 #waves {
 	width: 100%;
-	height: 70vh;
-	background-image: url("/static/images/wallpaper_casaos.jpg");
-	background-position-y: -150px;
-	background-size: cover;
+	min-height: 55vh;
 	overflow: hidden;
 	display: flex;
 	align-items: flex-end;
+
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-position: center -50px;
+		background-image: url("/static/images/berserker_3.jpg");
+		filter: brightness(60%);
+	}
 }
 
-.waves {
+.wave-svg {
 	width: 100%;
-	height: 15vh;
+	height: 10vh;
 	margin-bottom: -0.6875rem;
 	min-height: 3.125rem;
 	max-height: 9.375rem;
 	position: relative;
 }
-/* Animation */
-.parallax > use {
+
+/*------------ Wave Animation ------------*/
+.wave-parallax > use {
 	animation: wave 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 
-.parallax > use:nth-child(1) {
+.wave-parallax > use:nth-child(1) {
 	animation-delay: -2s;
 	animation-duration: 7s;
-	fill: rgba(253, 253, 253, 0.7);
+	fill: $grey-1-a7;
 }
 
-.parallax > use:nth-child(2) {
+.wave-parallax > use:nth-child(2) {
 	animation-delay: -3s;
 	animation-duration: 10s;
-	fill: rgba(253, 253, 253, 0.7);
+	fill: $grey-1-a5;
 }
 
-.parallax > use:nth-child(3) {
+.wave-parallax > use:nth-child(3) {
 	animation-delay: -4s;
 	animation-duration: 13s;
-	fill: rgba(253, 253, 253, 0.3);
+	fill: $grey-1-a3;
 }
 
-.parallax > use:nth-child(4) {
+.wave-parallax > use:nth-child(4) {
 	animation-delay: -5s;
 	animation-duration: 20s;
-	fill: #fdfdfd;
+	fill: $grey-1;
 }
 
 @keyframes wave {

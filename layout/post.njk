@@ -3,20 +3,15 @@
 
 {% include "./components/head.njk" %}
 
-<link rel="stylesheet" href="/static/css/post.min.css">
-<link rel="stylesheet" href="/static/css/atom-one-dark.min.css">
-
 <body>
     <div id="page">
         {% include "./components/nav.njk" %}
         <div class="main-content">
-            <article class="article-content">
+            <div class="main-article">
                 {{ content }}
-            </article>
+            </div>
         </div>
-        {% include "./components/footer.njk" %}
     </div>
 </body>
 
 </html>
-

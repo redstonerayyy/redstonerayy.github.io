@@ -3,29 +3,15 @@
 
 {% include "./components/head.njk" %}
 
-<link rel="stylesheet" href="/static/css/index.min.css">
-
 <body>
     <div id="page">
         {% include "./components/nav.njk" %}
-        <link rel="stylesheet" href="/static/css/wave.min.css">
-        <div id="waves">
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="white" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                <defs>
-                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                </defs>
-                <g class="parallax">
-                <use href="#gentle-wave" x="48" y="0" />
-                <use href="#gentle-wave" x="48" y="3" />
-                <use href="#gentle-wave" x="48" y="5" />
-                <use href="#gentle-wave" x="48" y="7" />
-                </g>
-            </svg>
-        </div>
+        {% include "./components/wave-background.njk" %}
         <div class="main-content">
-            <div class="index-main"></div>
+            <article class="main-article">
+                {{ content }}
+            </article>
         </div>
-        {% include "./components/footer.njk" %}
     </div>
 </body>
 
