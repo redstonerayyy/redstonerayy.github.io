@@ -9,6 +9,8 @@
     <meta name="description" content="A simple listing of commands on how to generate SSH Keys with OpenSSL.">
 </head>
 
+<link rel="stylesheet" href="/static/css/atom-one-dark.min.css">
+
 <link rel="stylesheet" href="/static/css/post.min.css">
 
 <body>
@@ -24,9 +26,19 @@
 </nav>
 
         <div class="main-content">
+            <p class="headline">
+                How to generate SSH Keys
+            </p>
+            <div class="dates">
+                <span>Released: 6.10.23</span>
+                <span>Last Changed: 6.10.23</span>
+            </div>
             <div class="main-article">
-                <h2>How to generate SSH Keys</h2>
-<pre><code class="shell">git push
+                <p>Use <a href="https://man.openbsd.org/ssh-keygen" target="_blank" rel="noopener">ssh-keygen</a> by OpenSSH.</p>
+<p>ed25519 for elliptic curve algorithm (better) and rsa for
+prime factorization algorithm</p>
+<pre><code class="shell">ssh-keygen -t ed25519 -C &quot;&lt;label&gt;&quot;
+ssh-keygen -t rsa -b 4096 -C &quot;&lt;label&gt;&quot;
 </code></pre>
 
             </div>

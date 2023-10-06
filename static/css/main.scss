@@ -31,19 +31,11 @@ code > * {
 	font-size: 1em;
 }
 
-.main-content {
-	width: 100%;
-	min-height: 45vh;
-	background-color: $grey-1;
-	color: white;
-}
-
-.main-article {
-	margin: auto;
-	margin-top: 60px;
-	width: 60%;
-}
-
 a {
 	text-decoration: none;
+}
+
+.main-content {
+	background-color: $grey-1;
+	color: white;
 }

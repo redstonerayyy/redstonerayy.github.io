@@ -2,12 +2,20 @@
 <html lang="en">
 
 {% include "./components/head.njk" %}
+{% include "./components/code-themes.njk" %}
 <link rel="stylesheet" href="/static/css/post.min.css">
 
 <body>
     <div id="page">
         {% include "./components/nav.njk" %}
         <div class="main-content">
+            <p class="headline">
+                {{ title }}
+            </p>
+            <div class="dates">
+                <span>Released: {{ releasedate }}</span>
+                <span>Last Changed: {{ lastchanged }}</span>
+            </div>
             <div class="main-article">
                 {{ content }}
             </div>

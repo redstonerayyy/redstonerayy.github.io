@@ -1,0 +1,1 @@
+alias templex="node templex/dist/main.js"
