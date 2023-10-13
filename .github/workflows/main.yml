@@ -25,6 +25,11 @@ jobs:
             - name: Build Pages
               run: |
                   node ./templex/dist/main.js build
+                  git config --global user.name "build@actions"
+                  git config --global user.email "build@actions"
+                  git add .
+                  git commit -m "build" || true
+                  git push
 
             - name: Copy to other Branch
               run: |
