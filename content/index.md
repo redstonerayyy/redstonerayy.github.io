@@ -9,3 +9,5 @@ summary: "Index Page. Shows a menu bar and links to different posts."
 [Generate SSH Keys](./posts/generate-ssh-keys.html)
 
 [Ubuntu Server Change Keyboard Layout](./posts/ubuntu-change-keyboardlayout.html)
+
+[Setup GNU Pass](./posts/setup-gnu-pass.html)
