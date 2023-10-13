@@ -47,3 +47,10 @@ ssh-keygen -t rsa -b 4096 -C &quot;&lt;label&gt;&quot;
 </body>
 
 </html>
+<script>
+        const pull = setInterval(async () => {
+            const res = await fetch("/_reload");
+            const data = await res.text();
+            if (data === "yes") window.location.reload();
+        }, 250);
+        </script>
