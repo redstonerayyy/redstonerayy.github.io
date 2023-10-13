@@ -17,7 +17,7 @@ jobs:
                   submodules: "true"
 
             - name: Change to Build Branch
-              run: /
+              run: |
                   git checkout build
 
             - name: Build Templex
@@ -33,7 +33,7 @@ jobs:
                   git config --global user.email "build@actions"
                   git add .
                   git commit -m "build" || true
-                  git push
+                  git push -f --set-upstream origin build
 
             - name: Copy to other Branch
               run: |
