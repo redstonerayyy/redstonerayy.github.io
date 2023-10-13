@@ -39,7 +39,7 @@ jobs:
               run: |
                   git config --global user.name "build@actions"
                   git config --global user.email "build@actions"
-                  git switch -c gh-pages
+                  git checkout --orphan gh-pages
                   git reset --hard && rm -rf ./templex
                   git checkout build -- public
                   mv public/* . && rm -rf ./public
