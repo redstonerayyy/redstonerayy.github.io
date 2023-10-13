@@ -16,6 +16,10 @@ jobs:
               with:
                   submodules: "true"
 
+            - name: Change to Build Branch
+              run: /
+                  git checkout build
+
             - name: Build Templex
               run: |
                   cd templex  
@@ -37,7 +41,7 @@ jobs:
                   git config --global user.email "build@actions"
                   git checkout --orphan gh-pages
                   git reset --hard && rm -rf ./templex
-                  git checkout main -- public
+                  git checkout build -- public
                   mv public/* . && rm -rf ./public
                   git add .
                   # Force the build to succeed, even if no files were changed
