@@ -24,7 +24,6 @@ jobs:
 
             - name: Build Pages
               run: |
-                  tree
                   node ./templex/dist/main.js build
 
             - name: Copy to other Branch
