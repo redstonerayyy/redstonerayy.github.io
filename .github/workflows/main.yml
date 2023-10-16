@@ -18,7 +18,7 @@ jobs:
 
             - name: Change to Build Branch
               run: |
-                  git switch -c build
+                  git checkout --orphan -b build
 
             - name: Build Templex
               run: |
