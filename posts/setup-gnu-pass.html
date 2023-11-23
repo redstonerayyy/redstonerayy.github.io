@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/main.min.css">
+    <title>Setup GNU Pass</title>
+    <meta name="description" content="Explains in detail on how to setup the GNU Pass password manager. Shows the most important commands and how to import and export GPG Keys.">
+</head>
+
+<link rel="stylesheet" href="/static/css/atom-one-dark.min.css">
+
+<link rel="stylesheet" href="/static/css/post.min.css">
+
+<body>
+    <div id="page">
+        <link rel="stylesheet" href="/static/css/navbar.min.css">
+<nav class="top-nav">
+    <div class="top-nav-links">
+        <a class="top-nav-home" href="/">Home</a>
+    </div>
+    <a href="https://github.com/Redstonerayy">
+        <img class="top-nav-github-logo" src="/static/images/github-mark-white.png" alt="Github Dark Logo">
+    </a>
+</nav>
+
+        <div class="main-content">
+            <p class="headline">
+                Setup GNU Pass
+            </p>
+            <div class="dates">
+                <span>Released: 13.10.23</span>
+                <span>Last Changed: 13.10.23</span>
+            </div>
+            <div class="main-article">
+                <h3>setup</h3>
+<pre><code class="sh">sudo pacman -Syu pass <span class="hljs-comment"># install gnu pass</span>
+gpg --gen-key  <span class="hljs-comment"># generate key; choice of name, ... not important; use secure password</span>
+gpg -K <span class="hljs-comment"># list keys and their ids</span>
+gpg --edit-key &lt;key-id&gt; <span class="hljs-comment"># change expiration date to `never expire`</span>
+gpg&gt; expire <span class="hljs-comment"># use expire command in key menu</span>
+gpg&gt; 0 <span class="hljs-comment"># select never expire</span>
+pass init &lt;key-id&gt; <span class="hljs-comment"># initialize new password store</span>
+pass git init <span class="hljs-comment"># use git for versions/rollbacks</span>
+</code></pre>
+<h2>usage</h2>
+<pre><code class="sh">pass insert github <span class="hljs-comment"># open prompt to insert a password into the store</span>
+pass generate &lt;name or path&gt; <span class="hljs-comment"># e.g. pass generate github/work</span>
+pass find &lt;term&gt; <span class="hljs-comment"># search for password entries</span>
+pass grep <span class="hljs-string">&quot;&lt;some search for all files&gt;&quot;</span>
+pass edit &lt;name or path&gt; <span class="hljs-comment"># edit password e.g. add email or other information</span>
+pass show &lt;name or path&gt; <span class="hljs-comment"># prints whole password file to stdout</span>
+pass show -c &lt;name or path&gt; <span class="hljs-comment"># copy first line (password) to clipboard</span>
+pass <span class="hljs-built_in">rm</span> &lt;name or path&gt; <span class="hljs-comment"># remove password</span>
+</code></pre>
+<h2>export gpg keys</h2>
+<pre><code class="sh">gpg --output public.pgp --armor --<span class="hljs-built_in">export</span> &lt;email/id of key&gt; <span class="hljs-comment"># export public key</span>
+gpg --output private.pgp --armor --export-secret-key &lt;email/id of key&gt; <span class="hljs-comment"># export private key</span>
+</code></pre>
+<h2>import gpg keys</h2>
+<pre><code class="sh">gpg --import private.pgp <span class="hljs-comment"># import private key; requires the password of it</span>
+gpg --import public.pgp <span class="hljs-comment"># import public key</span>
+gpg --edit-key &lt;key <span class="hljs-built_in">id</span>&gt; <span class="hljs-comment"># trust the key to add new password on other maschines</span>
+gpg&gt; trust <span class="hljs-comment"># trust command in gpg menu</span>
+gpg&gt; 5 <span class="hljs-comment"># highest trust level</span>
+</code></pre>
+<h2>shell hacks</h2>
+<pre><code class="sh"><span class="hljs-built_in">export</span> VARIABLE=$(pass show my/nice/api/token)
+</code></pre>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
