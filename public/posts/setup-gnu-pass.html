@@ -75,3 +75,10 @@ gpg&gt; 5 <span class="hljs-comment"># highest trust level</span>
 </body>
 
 </html>
+<script>
+        const pull = setInterval(async () => {
+            const res = await fetch("/_reload");
+            const data = await res.text();
+            if (data === "yes") window.location.reload();
+        }, 250);
+        </script>

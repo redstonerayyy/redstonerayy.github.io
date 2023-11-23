@@ -44,3 +44,10 @@
 </body>
 
 </html>
+<script>
+        const pull = setInterval(async () => {
+            const res = await fetch("/_reload");
+            const data = await res.text();
+            if (data === "yes") window.location.reload();
+        }, 250);
+        </script>

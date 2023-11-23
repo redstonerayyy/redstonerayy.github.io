@@ -4,7 +4,7 @@
 	height: 30px;
 	width: 100%;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-items: center;
 	left: 0;
 	top: 0;
@@ -12,7 +12,7 @@
 }
 
 .top-nav-links {
-	margin-right: 65%;
+	margin-left: 10px;
 }
 
 .top-nav-home {
